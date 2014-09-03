@@ -1,0 +1,9 @@
+--------------------------------------------
+Current Weather Conditions for :
+$data.get("city") , $data.get("region"), $data.get("country")
+
+Temperature : $data.get("temparature")
+Condition : $data.get("condition")
+Huamdity : $data.get("humidity")
+WindChill : $data.get("chill")
+--------------------------------------------

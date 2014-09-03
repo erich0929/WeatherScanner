@@ -1,0 +1,50 @@
+2014-09-03 17:13:28,502 - Velocity was not initialized! Calling init()...
+2014-09-03 17:13:28,502 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2014-09-03 17:13:28,502 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2014-09-03 17:13:28,502 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2014-09-03 17:13:28,503 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:993)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:972)
+	at org.apache.velocity.runtime.RuntimeSingleton.parse(RuntimeSingleton.java:265)
+	at org.apache.velocity.app.Velocity.evaluate(Velocity.java:274)
+	at org.sonatype.mavenbook.weather.WeatherFormatter.format(WeatherFormatter.java:34)
+	at org.sonatype.mavenbook.weather.WeatherFormatter.export(WeatherFormatter.java:44)
+	at org.sonatype.mavenbook.weather.Weather.exportData(Weather.java:209)
+	at org.sonatype.mavenbook.weather.Weather$ExportRunnable.run(Weather.java:144)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+	... 17 more
+2014-09-03 17:13:28,504 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-09-03 17:13:28,504 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-09-03 17:13:28,506 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2014-09-03 17:13:28,509 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-09-03 17:13:28,510 - Do unicode file recognition:  false
+2014-09-03 17:13:28,510 - FileResourceLoader : adding path '.'
+2014-09-03 17:13:28,526 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2014-09-03 17:13:28,528 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2014-09-03 17:13:28,529 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2014-09-03 17:13:28,530 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2014-09-03 17:13:28,531 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2014-09-03 17:13:28,532 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2014-09-03 17:13:28,553 - Created '20' parsers.
+2014-09-03 17:13:28,558 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2014-09-03 17:13:28,559 - Velocimacro : Default library not found.
+2014-09-03 17:13:28,559 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2014-09-03 17:13:28,559 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2014-09-03 17:13:28,559 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2014-09-03 17:13:28,559 - Velocimacro : autoload off : VM system will not automatically reload global library macros
